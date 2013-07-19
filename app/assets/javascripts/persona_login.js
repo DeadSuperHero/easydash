@@ -2,9 +2,8 @@
 * Our BrowserID login call. If the assertion was found, send this to Devise
 * with warden-browserid enabled for verification and login.
 */
+
 function personaLogin(url) {
-$(".persona-button").click(function(e) {
-  e.preventDefault();
 
   navigator.id.get(function(assertion) {
     if (assertion) {
@@ -28,6 +27,5 @@ $(".persona-button").click(function(e) {
       // something went wrong! the user isn't logged in.
       alert("Could not log you in!");
     }
-  })
   });
 }
