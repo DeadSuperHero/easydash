@@ -21,3 +21,18 @@ Then, launch the app:
 ```
 rails s
 ```
+
+## Signing in / Signing Out
+
+When running the app, be sure to keep in mind that there's no main page yet (will arrive in an update soon). To test the login, you'll want to point your browser at the login page to see it:
+
+By default for Devise, this means:
+```
+http://0.0.0.0:3000/users/sign_in
+```
+
+You can check that you're logged in by re-visiting the sign_in URL, which will just simply redirect you to the non-existant index. You can sign out by pointing your browser at:
+
+```
+http://0.0.0.0:3000/users/sign_out
+```
