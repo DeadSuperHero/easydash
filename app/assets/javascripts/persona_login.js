@@ -12,17 +12,18 @@ function personaLogin(url) {
       $.ajax({
         url: '/users/sign_in',
         type: "POST",
-        data: {"assertion": assertion},
-        dataTYpe: "json",
-        cache:false,
-        success:function(data,status){
-          console.log(data);
+        dataType: "html",
+        cache: false,
+        data: {
+          "assertion": assertion
+        },
+        success:function(data, status){
           window.location.href = '/';
         },
-        error:function(data,status){
+        error:function(data, status){
           alert(data.statusText + ": " + data.responseText);
         }
-      })
+      });
     } else {
       // something went wrong! the user isn't logged in.
       alert("Could not log you in!");
