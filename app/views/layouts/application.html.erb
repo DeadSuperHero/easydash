@@ -8,6 +8,36 @@
   <%= browserid_js_tag %>
 </head>
 <body>
+<script>
+$( document ).ready(function() {
+$( ".persona-button" ).click(function( event ) {
+personaLogin();
+event.preventDefault();
+});
+});
+</script>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+    <a class="brand" href="#">EasyDash</a>
+
+    <% if user_signed_in? %>
+  <li>
+  <div class="user-menu">
+  <td><%= image_tag avatar_for @user %></td>
+  <%=current_user.email%>
+  </div>     
+  </li>
+<% else %>
+  <li>
+  <div class="login-area">
+  <a href="#" class="persona-button"><span>Sign in with Mozilla Persona</span></a>
+  </div>
+  </li>
+<% end %>
+
+    </div>
+    </div>
 
 <%= yield %>
 

@@ -18,6 +18,10 @@ body {
 	background: #666;
 }
 
+#page {
+	margin-top: 3em;
+}
+
 @font-face {
 	font-family: 'Lobster';
 	src: url('lobster_1.4-webfont.eot');
@@ -55,4 +59,40 @@ body {
 
 #login-form .span12 {
 	text-align: center;
+}
+
+.navbar-inner {
+	background-color: #393939 !important;
+	background-image: none !important;
+	filter: none;
+	border-radius: 0px;
+}
+
+
+.navbar {
+	box-shadow: 1px 1px 3px #333;
+}
+
+.navbar .brand {
+	font-family: Lobster, sans-serif;
+	font-size: 2em;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	padding-left: 1em;
+}
+
+.user-menu {
+	float: right;
+	color: #eee;
+	font-size: 0.9em;
+	border-left: 1px solid #555;
+}
+
+.login-area {
+	float: right;
+	margin-top: 0.6%;
+}
+
+.user-menu, .login-area {
+	margin-right: 0.5%;
 }
