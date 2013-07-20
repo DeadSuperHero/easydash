@@ -1,6 +1,15 @@
 <h1>The Index Page!</h1>
 <p>This is the Index page, which you'll be redirected to after signing in!</p>
 
-<td><%= image_tag avatar_for @user %></td>
+<% if user_signed_in? %>
+  <li>
+  <td><%= image_tag avatar_for @user %></td>        
+  </li>
+<% else %>
+  <li>
+  <b>Nothing to see here yet!</b>  
+  </li>
+<% end %>
+
 <%= link_to 'Sign in', new_user_session_path %>
 <%= link_to 'Sign Out', destroy_user_session_path %>
